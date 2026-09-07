@@ -13,7 +13,9 @@ services:
         value: production
       - key: AI_CHATBOT_GROQ_API_KEY
         sync: false
-      - key: GMAIL_APP_PASSWORD
+      - key: RESEND_API_KEY
         sync: false
+      - key: RESEND_FROM_EMAIL
+        value: Renz Portfolio <onboarding@resend.dev>
       - key: ALLOWED_ORIGINS
         sync: false
