@@ -26,6 +26,15 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [mobileMenuOpen]);
+
   const scrollTo = (href: string) => {
     setMobileMenuOpen(false);
     const el = document.querySelector(href);
@@ -84,8 +93,12 @@ export function Navbar() {
 
         {/* Mobile/Tablet Nav Toggle — visible below lg */}
         <button 
-          className="lg:hidden text-foreground hover:text-primary"
+          type="button"
+          className="lg:hidden grid min-h-11 min-w-11 place-items-center text-foreground hover:text-primary"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-navigation"
           data-testid="button-mobile-menu"
         >
           {mobileMenuOpen ? <X /> : <Menu />}
@@ -101,7 +114,7 @@ export function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-card border-b border-primary/20 overflow-hidden"
           >
-            <nav className="flex flex-col px-4 py-4 font-mono gap-1 max-h-[calc(100dvh-64px)] overflow-y-auto">
+            <nav id="mobile-navigation" aria-label="Mobile navigation" className="flex flex-col px-4 py-4 font-mono gap-1 max-h-[calc(100dvh-64px)] overflow-y-auto">
               {navLinks.map((link, i) => (
                 <a
                   key={link.name}

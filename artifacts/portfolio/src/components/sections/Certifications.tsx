@@ -196,24 +196,28 @@ export function Certifications() {
         {/* Grid Gallery */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
           {certificates.map((cert, idx) => (
-            <motion.div
+            <motion.button
+              type="button"
               key={idx}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: (idx % 5) * 0.06, duration: 0.35 }}
               onClick={() => openLightbox(idx)}
-              className="group relative aspect-[4/3] rounded-lg overflow-hidden border border-border hover:border-primary/70 cursor-pointer bg-card transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,255,0.15)]"
+              aria-label={`Open certificate ${idx + 1}: ${cert.label}, issued by ${cert.issuer}`}
+              className="group relative aspect-[4/3] rounded-lg overflow-hidden border border-border hover:border-primary/70 focus-visible:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary cursor-pointer bg-card transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,255,0.15)]"
             >
               {/* Certificate image */}
               <img
                 src={cert.src}
                 alt={cert.label}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
 
               {/* Scanline overlay */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/80 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 sm:group-focus-visible:opacity-100 transition-opacity duration-300" />
 
               {/* Zoom icon */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -223,7 +227,7 @@ export function Certifications() {
               </div>
 
               {/* Bottom label */}
-              <div className="absolute bottom-0 left-0 right-0 p-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-background/80 backdrop-blur-sm border-t border-primary/20">
+              <div className="absolute bottom-0 left-0 right-0 p-2 sm:translate-y-full sm:group-hover:translate-y-0 sm:group-focus-visible:translate-y-0 transition-transform duration-300 bg-background/80 backdrop-blur-sm border-t border-primary/20">
                 <p className="text-primary font-mono text-[10px] truncate">{cert.issuer}</p>
               </div>
 
@@ -231,7 +235,7 @@ export function Certifications() {
               <div className="absolute top-2 left-2 bg-background/70 backdrop-blur border border-primary/30 rounded text-primary font-mono text-[10px] px-1.5 py-0.5">
                 {String(idx + 1).padStart(2, '0')}
               </div>
-            </motion.div>
+            </motion.button>
           ))}
         </div>
 
@@ -258,7 +262,7 @@ export function Certifications() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-50 bg-background/95 backdrop-blur-md flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-background/95 backdrop-blur-md overflow-y-auto p-3 sm:p-4"
             onClick={closeLightbox}
           >
             {/* Inner panel — stop propagation so clicking image doesn't close */}
@@ -267,7 +271,10 @@ export function Certifications() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.85, opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="relative max-w-4xl w-full flex flex-col items-center gap-4"
+              role="dialog"
+              aria-modal="true"
+              aria-label={`Certificate ${lightbox + 1} of ${certificates.length}: ${certificates[lightbox].label}`}
+              className="relative max-w-4xl w-full min-h-full sm:min-h-0 mx-auto flex flex-col items-center justify-center gap-3 sm:gap-4 py-2"
               onClick={e => e.stopPropagation()}
             >
               {/* Cert image */}
@@ -275,7 +282,7 @@ export function Certifications() {
                 <img
                   src={certificates[lightbox].src}
                   alt={certificates[lightbox].label}
-                  className="w-full h-auto max-h-[75vh] object-contain bg-card"
+                  className="w-full h-auto max-h-[58dvh] sm:max-h-[75vh] object-contain bg-card"
                 />
                 {/* Glow corners */}
                 <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary rounded-tl-xl pointer-events-none" />
@@ -293,19 +300,25 @@ export function Certifications() {
               {/* Nav buttons */}
               <div className="flex items-center gap-4 mt-1">
                 <button
+                  type="button"
                   onClick={prev}
+                  aria-label="Previous certificate"
                   className="p-3 rounded-full border border-border hover:border-primary/60 bg-card hover:bg-primary/10 transition-all text-foreground"
                 >
                   <ChevronLeft size={20} />
                 </button>
                 <button
+                  type="button"
                   onClick={closeLightbox}
+                  aria-label="Close certificate viewer"
                   className="p-3 rounded-full border border-border hover:border-destructive/60 bg-card hover:bg-destructive/10 transition-all text-foreground"
                 >
                   <X size={20} />
                 </button>
                 <button
+                  type="button"
                   onClick={next}
+                  aria-label="Next certificate"
                   className="p-3 rounded-full border border-border hover:border-primary/60 bg-card hover:bg-primary/10 transition-all text-foreground"
                 >
                   <ChevronRight size={20} />
@@ -317,7 +330,9 @@ export function Certifications() {
                 {certificates.map((c, i) => (
                   <button
                     key={i}
+                    type="button"
                     onClick={() => setLightbox(i)}
+                    aria-label={`View certificate ${i + 1}: ${c.label}`}
                     className={`shrink-0 w-14 h-10 rounded overflow-hidden border-2 transition-all ${
                       i === lightbox
                         ? 'border-primary shadow-[0_0_8px_rgba(0,255,255,0.5)]'

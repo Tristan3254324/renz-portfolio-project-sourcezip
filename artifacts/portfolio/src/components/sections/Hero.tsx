@@ -44,20 +44,10 @@ export function Hero() {
             <span className="text-primary glow-text font-mono tracking-tighter break-words [overflow-wrap:anywhere]">RENZ TRISTAN FERNANDEZ DIAZ</span>
           </h1>
           
-          {/* On mobile: animated ticker so the long subtitle doesn't push content down; md+ wraps naturally */}
           <div className="mb-6">
-            <p className="hidden md:block text-xl md:text-2xl text-muted-foreground font-light font-mono leading-snug">
+            <p className="text-sm sm:text-base md:text-2xl text-muted-foreground font-light font-mono leading-relaxed break-words">
               &gt; {resumeData.personal.title}
             </p>
-            <div className="md:hidden overflow-hidden whitespace-nowrap">
-              <motion.p
-                className="inline-block text-base text-muted-foreground font-light font-mono"
-                animate={{ x: ['0%', '-50%'] }}
-                transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
-              >
-                &gt;&nbsp;{resumeData.personal.title}&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;&gt;&nbsp;{resumeData.personal.title}&nbsp;&nbsp;&nbsp;
-              </motion.p>
-            </div>
           </div>
           
           <p className="text-muted-foreground/80 max-w-lg mb-10 leading-relaxed text-sm md:text-base">
@@ -121,11 +111,13 @@ export function Hero() {
 
       </div>
 
-      <motion.div 
+      <motion.button
+        type="button"
+        aria-label="Scroll to about section"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center cursor-pointer text-muted-foreground hover:text-primary transition-colors"
+        className="absolute bottom-4 md:bottom-10 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center min-h-11 min-w-11 text-muted-foreground hover:text-primary transition-colors"
         onClick={() => scrollTo('#about')}
       >
         <span className="font-mono text-xs tracking-widest mb-2">SCROLL_DOWN</span>
@@ -135,7 +127,7 @@ export function Hero() {
         >
           <ChevronDown size={20} />
         </motion.div>
-      </motion.div>
+      </motion.button>
 
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes scan {

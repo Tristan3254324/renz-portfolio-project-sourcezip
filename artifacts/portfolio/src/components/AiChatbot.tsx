@@ -206,7 +206,7 @@ export function AiChatbot() {
             exit={{ opacity: 0, y: 40, scale: 0.95 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
             className="fixed bottom-4 sm:bottom-6 inset-x-3 sm:inset-x-auto sm:right-6 sm:w-[370px] z-50 flex flex-col rounded-2xl border border-primary/30 bg-background/95 backdrop-blur-xl shadow-[0_0_60px_rgba(0,255,255,0.15)] overflow-hidden"
-            style={{ height: isMinimized ? 'auto' : 'min(560px, calc(100dvh - 5rem))' }}
+            style={{ height: isMinimized ? 'auto' : 'min(560px, calc(100dvh - 2rem))' }}
           >
             {/* Header */}
             <div className="relative flex items-center gap-3 px-4 py-3 border-b border-primary/20 bg-card/60 shrink-0">
@@ -230,22 +230,25 @@ export function AiChatbot() {
               <div className="flex items-center gap-1">
                 <button
                   onClick={reset}
-                  className="p-1.5 rounded hover:bg-primary/10 text-muted-foreground hover:text-primary transition-colors"
+                  className="grid min-h-11 min-w-11 place-items-center rounded hover:bg-primary/10 text-muted-foreground hover:text-primary transition-colors"
                   title="Reset conversation"
+                  aria-label="Reset conversation"
                 >
                   <RotateCcw size={14} />
                 </button>
                 <button
                   onClick={() => setIsMinimized(m => !m)}
-                  className="p-1.5 rounded hover:bg-primary/10 text-muted-foreground hover:text-primary transition-colors"
+                  className="grid min-h-11 min-w-11 place-items-center rounded hover:bg-primary/10 text-muted-foreground hover:text-primary transition-colors"
                   title={isMinimized ? 'Expand' : 'Minimize'}
+                  aria-label={isMinimized ? 'Expand chat' : 'Minimize chat'}
                 >
                   {isMinimized ? <Maximize2 size={14} /> : <Minimize2 size={14} />}
                 </button>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-1.5 rounded hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-colors"
+                  className="grid min-h-11 min-w-11 place-items-center rounded hover:bg-destructive/10 text-muted-foreground hover:text-destructive transition-colors"
                   title="Close"
+                  aria-label="Close chat"
                 >
                   <X size={14} />
                 </button>
@@ -334,6 +337,7 @@ export function AiChatbot() {
                     <button
                       type="submit"
                       disabled={!input.trim() || isStreaming}
+                      aria-label={isStreaming ? 'Sending message' : 'Send message'}
                       className="shrink-0 w-10 h-10 rounded-xl bg-primary text-primary-foreground flex items-center justify-center hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed transition-all hover:shadow-[0_0_12px_rgba(0,255,255,0.4)]"
                     >
                       {isStreaming ? (

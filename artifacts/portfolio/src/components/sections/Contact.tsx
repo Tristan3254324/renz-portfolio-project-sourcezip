@@ -91,15 +91,15 @@ export function Contact() {
                 </div>
               </a>
 
-              <div className="flex items-start gap-4 p-4 rounded-lg bg-card border border-border">
-                <div className="bg-primary/10 p-3 rounded">
+              <a href={`tel:${resumeData.personal.phone.replace(/\D/g, '')}`} className="flex items-start gap-4 p-4 rounded-lg bg-card border border-border hover:border-primary/50 transition-colors group">
+                <div className="bg-primary/10 p-3 rounded group-hover:bg-primary/20 transition-colors">
                   <Phone className="text-primary" size={24} />
                 </div>
                 <div className="min-w-0">
                   <div className="text-sm text-muted-foreground font-mono mb-1">COMMS</div>
                   <div className="text-foreground">{resumeData.personal.phone}</div>
                 </div>
-              </div>
+              </a>
 
               <div className="flex items-start gap-4 p-4 rounded-lg bg-card border border-border">
                 <div className="bg-primary/10 p-3 rounded">
