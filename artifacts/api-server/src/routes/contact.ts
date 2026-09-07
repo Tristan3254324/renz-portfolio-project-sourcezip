@@ -5,6 +5,9 @@ const contactRouter = Router();
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
+  connectionTimeout: 15_000,
+  greetingTimeout: 10_000,
+  socketTimeout: 30_000,
   auth: {
     user: "renztristanfernandezdiaz@gmail.com",
     pass: process.env.GMAIL_APP_PASSWORD,
