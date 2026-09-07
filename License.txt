@@ -1,0 +1,11 @@
+No Redistribution:
+“You may not copy, download, fork, or redistribute this repository or its contents without explicit written permission from the owner.”
+
+No Commercial Use:
+“The contents of this repository may not be used for commercial purposes under any circumstances.”
+
+Access Control:
+“Access is granted solely for collaboration purposes. Any attempt to download, clone, or replicate the repository without authorization is strictly prohibited.”
+
+Termination Clause:
+“The repository owner reserves the right to revoke access at any time if these terms are violated.”
