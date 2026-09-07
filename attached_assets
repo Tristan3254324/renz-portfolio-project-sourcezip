@@ -1,5 +1,0 @@
-attached_assets/.gitkeep
-git add attached_assets
-git commit -m "Add attached_assets folder with files"
-git push
-
