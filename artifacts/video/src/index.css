@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --color-primary: #00FFFF; /* Electric Cyan */
+  --color-secondary: #0A0A0A; /* Deep Dark */
+  --color-accent: #00FFFF;
+
+  --color-bg-light: #000000;
+  --color-bg-dark: #050505;
+  --color-bg-muted: #111111;
+
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #A3A3A3;
+  --color-text-muted: #525252;
+  --color-text-inverse: #000000;
+
+  --color-success: #00FFFF;
+  --color-warning: #FFB800; /* Gold for record */
+  --color-error: #FF003C; /* Cyberpunk red/pink */
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Space Mono', monospace;
+  --font-mono: 'Space Mono', monospace;
+}
+
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-bg-light: var(--color-bg-light);
+  --color-bg-dark: var(--color-bg-dark);
+  --color-bg-muted: var(--color-bg-muted);
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-inverse: var(--color-text-inverse);
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-primary);
+}
+
+/* Utilities for neon glows */
+.neon-text {
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.3), 0 0 20px rgba(0, 255, 255, 0.1);
+}
+.neon-box {
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2), inset 0 0 10px rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+}
+.neon-box-gold {
+  box-shadow: 0 0 15px rgba(255, 184, 0, 0.3), inset 0 0 10px rgba(255, 184, 0, 0.1);
+  border: 1px solid rgba(255, 184, 0, 0.4);
+}
