@@ -20,12 +20,15 @@ export function Contact() {
     e.preventDefault();
     setStatus('sending');
     setErrorMsg('');
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 45_000);
 
     try {
       const res = await fetch(apiUrl('/api/contact'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
+        signal: controller.signal,
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Unknown error');
@@ -33,7 +36,15 @@ export function Contact() {
       setForm({ name: '', email: '', subject: '', message: '' });
     } catch (err) {
       setStatus('error');
-      setErrorMsg(err instanceof Error ? err.message : 'Transmission failed. Please try again.');
+      setErrorMsg(
+        err instanceof DOMException && err.name === 'AbortError'
+          ? 'Transmission timed out. The mail service may still be waking up—please try again.'
+          : err instanceof Error
+            ? err.message
+            : 'Transmission failed. Please try again.',
+      );
+    } finally {
+      window.clearTimeout(timeoutId);
     }
   };
 
