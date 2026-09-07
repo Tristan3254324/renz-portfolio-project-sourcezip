@@ -1,0 +1,331 @@
+Work Samples
+Visualized deliverables from 4+ years across 5 industries.
+
+All Works
+Finance & Compliance
+Operations & Admin
+Marketing & Growth
+Tech & Innovation
+Creative & Freelance
+Client Compliance Review
+ID: CR-8942-A
+AML STATUS
+CLEARED
+KYC TIER
+Tier 2 Verified
+CTF CHECK
+PASSED
+Instrument: LC - Letter of Credit
+Industry
+Agri-Exports
+Country
+Philippines
+Trade Value
+$2.4M
+Risk Level
+Low
+Finance & Compliance
+Trade Finance Client Compliance Report
+Trade Finance Executive • Euro Exim Bank
+A comprehensive compliance review verifying AML, KYC, and CTF adherence for international trade clients.
+
+View Sample Details
+→
+SAR — Suspicious Activity Report
+0x8F2...a1B
+$45,200
+0x3A9...d4C
+$12,450
+0x1C2...99F
+$8,900
+Total Flagged: 3
+Risk Score: 78/100
+Under Review
+Finance & Compliance
+Suspicious Activity Flag Report
+Anti-Money Laundering Analyst • Open NFT
+An internal dashboard flagging suspicious transaction flows and on-chain activity for further review.
+
+View Sample Details
+→
+Client Portfolio Overview
+BTC
+42%
+ETH
+28%
+ALT
+30%
+TOTAL VALUE
+$18,400
+MONTHLY RETURN
++12.4%
+KYC Verified | Regulatory Compliant
+Finance & Compliance
+Crypto Investment Portfolio Summary
+Customer Service Rep • OTC JKE British Trading & Investment
+A snapshot of client asset distribution, monthly returns, and regulatory compliance status.
+
+View Sample Details
+→
+DIFX Campaign Brief
+Q3 2023
+Goal
+Expand regional brand awareness & user acquisition.
+Channels
+LinkedIn, Twitter, Telegram
+500 New Signups
+3 Workshops Hosted
+12 Influencer Mentions
+Finance & Compliance
+Trade Finance Instruments Overview
+DIFX Ambassador • DIFX Digital Financial Exchange
+A strategic brief outlining goals, targets, and KPIs for upcoming crypto and trade finance workshops.
+
+View Sample Details
+→
+Accounts Payable — Weekly Summary
+Vendor
+Inv #
+Amount
+Status
+CloudHost
+INV-102
+$1,240.00
+Paid
+LegalSvcs
+INV-089
+$4,500.00
+Pend
+OfficeEqp
+INV-110
+$850.00
+Paid
+ConsultX
+INV-042
+$3,200.00
+Late
+AdAgency
+INV-115
+$4,530.00
+Pend
+Total Outstanding:
+$12,230.00
+Finance & Compliance
+Accounts Payable Summary
+Accounting Intern • Scrubbed.net Global Services
+A weekly ledger tracking outstanding vendor payments and tracking settlement statuses.
+
+View Sample Details
+→
+Client Profile — Alignment Check
+Updated: Today
+Acme Global Corp.
+HubSpot: In Sync
+CrewHub: Active
+ACTIVITY LOG
+Folder moved to Active
+10:42 AM
+Profile synchronized
+09:15 AM
+Email inquiry resolved
+Yesterday
+Operations & Admin
+CRM Profile Alignment Report
+Client Success Intern • CrewBloom
+An audit of client records ensuring data parity between HubSpot and CrewHub systems.
+
+View Sample Details
+→
+Weekly Sync — Research Operations
+Oct 24
+RF
+JD
+AM
+TK
+AGENDA ITEMS
+1. Q2 Budget Review
+2. Policy Draft Feedback
+3. Data Analysis Update
+4. Stakeholder Report
+Operations & Admin
+Project Status & Meeting Agenda
+Management Intern • Prophema Applied Research
+A structured weekly sync document tracking agenda items, attendees, and project deliverables.
+
+View Sample Details
+→
+Influencer Research Database
+Name
+Plat.
+Follow
+Niche
+Status
+@alex...
+IG
+120K
+Tech
+Contacted
+@sam_x
+TT
+85K
+Life
+Qualified
+cryptoJ
+X
+400K
+Fin
+Pending
+@luna9
+IG
+22K
+Life
+Responded
+TechBro
+YT
+1.2M
+Tech
+Closed
+Marketing & Growth
+Influencer Contact Database
+Virtual Assistant • Clicks Talent
+A centralized tracker for influencer outreach, mapping followers, niches, and communication statuses.
+
+View Sample Details
+→
+Monthly Performance Report
+IG
+FB
+TT
+REACH
+2.4M
+ENGAGEMENTS
+312K
+AVG RATE
+4.8%
+ENGAGEMENT TREND
+W1
+W2
+W3
+W4
+Marketing & Growth
+Social Media Analytics Report
+Social Media Manager • Most Viral
+A performance dashboard visualizing reach, engagement rates, and platform-specific metrics.
+
+View Sample Details
+→
+Real Estate Lead Gen — Monthly Report
+LEADS SOURCED
+340
+QUALIFIED
+87
+APPOINTMENTS SET
+24
+LINKEDIN
+180
+EMAIL
+95
+IG
+65
+Marketing & Growth
+Lead Generation Campaign Report
+Growth Specialist • August 99
+A funnel analysis of real estate lead generation tracking sourcing, qualification, and appointment conversions.
+
+View Sample Details
+→
+HypeHive — Active Client Campaigns
+PLANNING
+Influencer Collab
+IN PROGRESS
+Brand Awareness Push
+Engagement Drive
+COMPLETED
+Product Launch
+Marketing & Growth
+Client Campaign Tracker
+Client Success VA • HypeHive
+A kanban-style board monitoring the lifecycle and progress of diverse marketing campaigns.
+
+View Sample Details
+→
+Squad Alpha — Weekly Report
+Intern
+Task
+Progress
+Status
+JL
+Data Clean
+On Track
+MK
+API Setup
+On Track
+RT
+UI Build
+Review
+AB
+Docs
+Review
+Avg. Completion: 82%
+Interns: 8
+Issues Flagged: 2
+Tech & Innovation
+Squad Progress Report
+Team Leader / Squad Lead • GAOTek Inc.
+A weekly performance summary evaluating intern progress, task completion, and team health.
+
+View Sample Details
+→
+EON Reality — AI & XR for Academic Excellence
+Value Proposition
+Immersive Learning Environments
+Scale learning via spatial computing
+AI-Powered Training Modules
+GPT-assisted curriculum generation
+Industry-Academia Bridge
+Align skills with market demands
+Crafted with GPT AI
+For: [University Name]
+Tech & Innovation
+AI Outreach Presentation Slide
+Spatial AI Entrepreneur • EON Reality
+A pitch slide articulating the value of spatial AI and XR for academic institutions.
+
+View Sample Details
+→
+Deposition Briefing
+Interpreter Reference
+Case Reference:
+███████
+Language Pair:
+English ↔ Tagalog/Ilonggo
+Jurisdiction:
+Maryland, USA
+Parties Present:
+Attorney A, Attorney B, Judge
+Key Glossary
+Objection
+Pagtutol
+Subpoena
+Subpina
+Testimony
+Testimonya
+Creative & Freelance
+Legal Deposition Briefing Sheet
+Legal Deposition Interpreter • The Language Doctors
+A formalized reference document detailing case jurisdiction, parties involved, and essential terminology.
+
+View Sample Details
+→
+7-Day Southeast Asia Adventure
+CONFIRMED
+Day 1: Arrival + Welcome Dinner
+Day 2: Island Hopping
+Day 3: Cultural Tour
+Day 4-6: Free Exploration & Markets
+Day 7: Departure
+Capacity: 8/10 TripMates
+Creative & Freelance
+Group Trip Itinerary
+ProTripLeader • JoinMyTrip
+A day-by-day travel plan highlighting daily activities, logistics, and group capacity for international trips.
